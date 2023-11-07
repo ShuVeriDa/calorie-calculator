@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Калькулятор калорий</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор калорий</h1>
+    </header>
+
+    <div class="target-calories">
+        <label for="targetInput">Целевые калории на день: </label>
+        <input type="number" id="targetInput" placeholder="Калории">
+    </div>
+    <div class="add-food">
+        <h2>Добавить продукт</h2>
+        <div class="product-btns">
+            <input type="text" id="foodName" placeholder="Название продукта">
+            <input type="number" id="calories" placeholder="Калории">
+            <button id="addButton">Добавить</button>
+        </div>
+
+    </div>
+    <div class="food-list">
+        <h2>Список продуктов</h2>
+        <div class="food-list-input-btn">
+            <input type="text" id="filter" placeholder="Фильтр по названию">
+            <button id="clearAllButton">Очистить</button>
+        </div>
+        <div class="sort-and-title">
+            <h3>Продукты и калории </h3>
+            <div id="sortButton">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 18L16 6M16 6L20 10.125M16 6L12 10.125" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 6L8 18M8 18L12 13.875M8 18L4 13.875" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <ul id="foodItems"></ul>
+    </div>
+    <div class="daily-calories">
+        <h4>Потребленные калории за день: <span id="totalCalories">0 калорий</span></h4>
+    </div>
+    <div class="warnings">
+        <p id="warning"></p>
+    </div>
+
+    <canvas id="caloriesChart" width="400" height="200"></canvas>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
